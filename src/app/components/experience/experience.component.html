@@ -1,0 +1,9 @@
+<div class="experience-container" @fadeAnimation>
+  <h2>Professional Experience</h2>
+  <div class="experience-item" *ngFor="let exp of experiences">
+    <h3>{{exp.title}}</h3>
+    <h4>{{exp.company}}</h4>
+    <p class="period">{{exp.period}}</p>
+    <p class="description">{{exp.description}}</p>
+  </div>
+</div>

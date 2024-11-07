@@ -1,0 +1,9 @@
+<div class="skills-container" [@slideAnimation]="animationState">
+  <h2>Technical Skills</h2>
+  <div class="skill-category" *ngFor="let category of skills">
+    <h3>{{category.category}}</h3>
+    <ul class="skills-list">
+      <li *ngFor="let item of category.items">{{item}}</li>
+    </ul>
+  </div>
+</div>

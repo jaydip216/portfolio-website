@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Global animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Component containers */
+.education-container,
+.skills-container,
+.projects-container,
+.achievements-container {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Lists styling */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list li {
+  background: #f0f0f0;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9em;
+}
