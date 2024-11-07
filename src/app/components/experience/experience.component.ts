@@ -8,19 +8,8 @@ import { fadeAnimation } from '../../animations/fade.animation';
   imports: [CommonModule],
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.css'],
-  animations: [fadeAnimation]
 })
 export class ExperienceComponent {
-  animationState: string = '*';
-
-  constructor() {
-    this.resetAnimation();
-  }
-
-  resetAnimation() {
-    this.animationState = 'void';
-    setTimeout(() => this.animationState = '*', 50);
-  }
   experiences = [
     {
       title: 'Senior Developer',

@@ -11,15 +11,5 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectsComponent {
 
-  animationState: string = '*';
-
-  constructor() {
-    this.resetAnimation();
-  }
-
-  resetAnimation() {
-    this.animationState = 'void';
-    setTimeout(() => this.animationState = '*', 50);
-  }
 
 }

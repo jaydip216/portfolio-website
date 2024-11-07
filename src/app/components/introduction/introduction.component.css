@@ -1,0 +1,39 @@
+h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.tag-container {
+  display: inline-block;
+  width: 200px; /* Adjust the width as needed */
+  text-align: left;
+  font-weight: bold;
+  color: #007BFF; /* Change the color as needed */
+}
+
+.introduction-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.introduction-container h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.introduction-container p {
+  font-size: 1.2em;
+  color: #666;
+  line-height: 1.6;
+}

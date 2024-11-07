@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChildren, QueryList } from '@angular/core';
-import { IntroductionComponent } from './introduction/introduction.component';
+import { IntroductionComponent } from './components/introduction/introduction.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
   standalone: true,
   imports: [
     CommonModule,
@@ -27,7 +27,6 @@ export class AppComponent {
   sections!: QueryList<ElementRef>;
   
   activeSection: string = 'introduction';
-  animationState: string = 'void';
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
@@ -41,9 +40,6 @@ export class AppComponent {
 
       if (pageYOffset >= offsetTop - 100 && pageYOffset < offsetTop + offsetHeight - 100) {
         newSection = element.id;
-        // Trigger animation when section changes
-        this.animationState = 'void';
-        setTimeout(() => this.animationState = '*', 50);
       }
     });
 
@@ -56,12 +52,7 @@ export class AppComponent {
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
-      // Trigger animation when clicking navbar
-      this.animationState = 'void';
-      setTimeout(() => {
-        this.animationState = '*';
-        element.scrollIntoView({ behavior: 'smooth' });
-      }, 50);
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }

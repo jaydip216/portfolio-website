@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { fadeAnimation } from '../../animations/fade.animation';
+import { fadeAnimation, slideAnimation } from '../../animations/fade.animation';
 
 @Component({
   selector: 'app-education',
@@ -8,19 +8,8 @@ import { fadeAnimation } from '../../animations/fade.animation';
   imports: [CommonModule],
   templateUrl: './education.component.html',
   styleUrl: './education.component.css',
-  animations: [fadeAnimation]
 })
 export class EducationComponent {
-  animationState: string = '*';
-
-  constructor() {
-    this.resetAnimation();
-  }
-
-  resetAnimation() {
-    this.animationState = 'void';
-    setTimeout(() => this.animationState = '*', 50);
-  }
   education = [
     {
       degree: 'Bachelor in Computer Science',
